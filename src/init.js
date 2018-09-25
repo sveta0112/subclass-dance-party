@@ -36,12 +36,10 @@ $(document).ready(function() {
     for(var i=0; i<window.dancers.length; i++) {
       window.dancers[i].lineUp();
     }
-    
-    //var LineUpFunctionName = $(this).data('dancer-maker-function-name');
+  });
 
-    // get the maker function for the kind of dancer we're supposed to make
-    //var LineUpMakerFunction = window[dancerMakerFunctionName];
-
+  $("span").mouseover(function(){
+    $("span").css('border-radius', '300px');
   });
 });
 
