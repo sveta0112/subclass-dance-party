@@ -28,6 +28,20 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
+  });
+
+  $('.addLineUpButton').on('click', function(event) {
+    //console.log(window.dancers);
+    for(var i=0; i<window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+    }
+    
+    //var LineUpFunctionName = $(this).data('dancer-maker-function-name');
+
+    // get the maker function for the kind of dancer we're supposed to make
+    //var LineUpMakerFunction = window[dancerMakerFunctionName];
+
   });
 });
 

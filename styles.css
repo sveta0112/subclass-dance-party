@@ -5,6 +5,9 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url('https://www.islands.com/sites/islands.com/files/styles/380_4x3/public/islands-homepage-grid-beach.jpg?itok=MFnibsJe');
+  background-position: center;
+  background-size: cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -21,10 +24,12 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  /*border:10px solid red;
+  border-radius:10px;*/
   position:absolute;
   height: 10px;
   width: 20px;
-  background: orange;
+  background-image: url('https://i.ebayimg.com/images/g/vT4AAOSwWTRWvjUk/s-l300.jpg');
+  background-position: center;
+  background-size: cover;
 }

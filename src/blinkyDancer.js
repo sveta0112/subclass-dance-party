@@ -16,7 +16,11 @@ makeBlinkyDancer.prototype.step = function() {
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.toggle();
-  this.$node.animate({left: '50px'});
+  //this.$node.toggle();
+  //this.$node.animate({left: '50px'});
   this.$node.animate({top: '100px'});
+  this.$node.css('background', 'red');
+};
+makeBlinkyDancer.prototype.lineUp = function() {
+  this.$node.animate({left: '400px'});
 };
