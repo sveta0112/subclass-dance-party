@@ -48,7 +48,7 @@ $(document).ready(function() {
   });
 
   $('body').on('mouseleave', '.huge', function() {
-    $(this).toggleClass('huge blinky');
+    $(this).toggleClass('blinky huge');
   });
   // $('interactButton').on('click', function() {
   //   for (var i = 0; i < window.dancers.length; i++) {

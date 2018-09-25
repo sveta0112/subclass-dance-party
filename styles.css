@@ -29,8 +29,8 @@ body, a:link, a:visited, a:active{
 }
 .dancer{
   position:absolute;
-  height: 20px;
-  width: 30px;
+  height: 70px;
+  width: 70px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -38,6 +38,12 @@ body, a:link, a:visited, a:active{
 .huge {
   height: 260px;
   width: 200px;
+}
+.leonardo {
+  background-image: url('http://4.bp.blogspot.com/-DmBHFt1ME-Y/Ta7blnkaY8I/AAAAAAAAL-A/zxtOBIPjGX4/s1600/profile_mikey.gif');
+}
+.fancy {
+  background-image: url('https://img.clipartxtras.com/8146ddb1b53896985c6dc41bcac6a6f5_teenage-mutant-ninja-turtles-clip-art-clipartsco-turtles-teenage-mutant-ninja-turtle-clipart_600-600.png');
 }
 
 .rotate {
