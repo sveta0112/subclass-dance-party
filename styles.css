@@ -24,4 +24,7 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+  height: 10px;
+  width: 20px;
+  background: orange;
 }
