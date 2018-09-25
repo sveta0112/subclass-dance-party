@@ -1,5 +1,8 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.position = [];
+  //console.log(window.position);
+  
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -29,17 +32,46 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+    window.position.push(dancer.$node.position());
   });
 
-  $('.addLineUpButton').on('click', function(event) {
+  $('.lineButton').on('click', function(event) {
     //console.log(window.dancers);
-    for(var i=0; i<window.dancers.length; i++) {
+    for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
     }
+    //console.log(window.position[0].left);
   });
 
-  $("span").mouseover(function(){
-    $("span").css('border-radius', '300px');
+  $('body').on('mouseover', '.blinky', function() {
+    $(this).toggleClass('blinky huge');
   });
+
+  $('body').on('mouseleave', '.huge', function() {
+    $(this).toggleClass('huge blinky');
+  });
+  // $('interactButton').on('click', function() {
+  //   for (var i = 0; i < window.dancers.length; i++) {
+  //     window.dancers[i].roundUp();
+  //   }
+  // });
+  $('.meetupButton').on('click', function(event) {
+    var firstLeft = window.position[0].left;
+    var firstTop = window.position[0].top;
+    var furthest = 0;
+    var index = 0;
+    for (var i = 1; i < window.position.length; i++) {
+      var a = Math.abs(window.position[i].left - firstLeft);
+      var b = Math.abs(window.position[i].top - firstTop);
+      var cSquared = Math.pow(a, 2) + Math.pow(b, 2);
+      if (cSquared > furthest) {
+        furthest = cSquared;
+        index = i;
+      }
+    }
+    window.dancers[0].$node.animate({left: '55%', top: '50%'});
+    window.dancers[index].$node.animate({left: '50%', top: '50%'});
+  });
+   
 });
 
